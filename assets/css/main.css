@@ -1,0 +1,648 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    /*Cuerpo principal*/
+    body{
+        cursor:url('../img/cursor.png'), auto;
+        font-family: 'Amaranth', sans-serif;
+    }
+    #fondo{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: url('../img/fondo.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 1;
+    }
+    #fondo:before {
+        content:'';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.5);
+    }
+    .contenedor-principal{
+        position: absolute;
+        width: 100%;
+        min-height: 100vh;
+        z-index: 10;
+    }
+    .encabezado{
+        width: 100%;
+        height: 120px;
+    }
+    .container{
+        width: 90%;
+        max-width: 1200px;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 40px;
+    }
+    .logo .texto-logo{
+        text-decoration: none;
+    }
+
+    .logo i {
+        color: white;
+        font-size: 24px;
+    }
+
+    i,a, button{
+        cursor:url('../img/mano.png'), pointer;
+    }
+
+    .logo h1{
+        color: #fff;
+        font-weight: 400;
+        font-size: 32px;
+        margin-left: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 4px;
+    }
+    .container .menu{
+        float: right;
+        line-height: 70px;
+    }
+    .container .menu a{
+        display: inline-block;
+        padding: 15px 10px;
+        line-height: normal;
+        text-decoration: none;
+        color: #fff;
+        transition: all 0.3s ease;
+        border-bottom: 2px solid transparent;
+        font-size: 20px;
+    }
+    .container .menu a:hover{
+        border-bottom: 2px solid #c7c7c7;
+        padding: 5px 10px;
+    }
+    /*Buscador*/
+    .barra-busqueda{
+        width: 500px;
+        height: 32px;
+        padding: 0 15px;
+        border:none;
+        border-radius: 50px;
+        outline:none;
+        background-color: rgba(255,255,255,.2);
+        color:white;
+    }
+    ::-webkit-input-placeholder{
+        color: #a1a1a1;
+    }
+
+    .btn-busqueda{
+        position: relative;
+        left: -40px;
+        width: 40px;
+        height: 40px;
+        border: none;
+        border-radius: 50%;
+        outline:none;
+    }
+
+    /*Menu Lateral*/
+
+    .cuerpo-menu{
+        position: absolute;
+        background: rgba(0,0,0,0.5);
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .5s ease;
+    }
+    .mostrar{
+        opacity: 1;
+        visibility: visible;
+    }
+    .contenido-menu{
+        width: 100%;
+        max-width: 250px;
+        background: rgb(1, 60, 71);
+        height: 120vh;
+        position: relative;
+        transition: all 500ms ease;
+    }
+    .titulo-menu{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 60px;
+        color: white;
+        letter-spacing: 2px;
+    }
+    .titulo-menu h3{
+        font-size: 24px;
+    }
+    .titulo-menu i{
+        font-size: 16px;
+    }
+    .contenido-menu nav a{
+        display: block;
+        text-decoration: none;
+        padding: 20px 20px 20px 50px;
+        color: #c7c7c7;
+        border-left: 5px solid transparent;
+        transition: all 400ms ease;
+    }
+    .contenido-menu nav a:hover{
+        border-left: 5px solid #c7c7c7;
+        background: rgba(255 , 255, 255,.1);
+    }
+  
+    /* Contenido principal */
+
+    main.contenedor{
+        width: 90%;
+        max-width: 1200px;
+        margin: 30px auto 150px auto;
+    }
+    .imagen-principal{
+        background-image: url('/assets/img/game1.webp');
+        background-size: cover;
+        background-position: center bottom;
+        width: 100%;
+        height: 500px;
+        color:white;
+        border-radius: 30px;
+        font-weight: 400;
+        box-shadow: 0 5px 20px rgba(255, 255, 255, .2);
+        margin-bottom: 50px;
+    }
+    .oscuro{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-color: rgba(0, 0, 0, .3);
+        padding: 50px;
+        border-radius: 30px;
+    }
+    .imagen-principal h1{
+        font-size: 56px;
+    }
+    .imagen-principal p{
+        font-size: 24px;
+    }
+    .juegos-secundarios{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+    .imagen-juego1{
+        
+        background-image: url('/assets/img/game2.png');
+        background-size:cover;
+        background-position: top center;
+        width: 48%;
+        height: 300px;
+        color: white;
+        border-radius: 30px;
+        box-shadow: 0 5px 20px rgba(255, 255, 255, .2);
+    }
+    .oscuro1,.oscuro2{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 50px;
+        border-radius: 30px;
+        background-color: rgba(0, 0, 0, .3);
+    }
+    .imagen-juego1 h3{
+        font-size: 40px;
+    }
+    .imagen-juego1 p{
+        font-size: 16px;
+    }
+    .imagen-juego2{
+        background-image: url('/assets/img/game3.jpg');
+        background-size:cover;
+        background-position: top center;
+        width: 48%;
+        height: 300px;
+        border-radius: 30px;
+        color: white;
+        box-shadow: 0 5px 20px rgba(255, 255, 255, .2);
+    }
+    .imagen-juego2 h3{
+        font-size: 35px;
+    }
+    .btn-precio{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* margin-top: 30px; */
+    }
+    .btn-precio button{
+        width: 200px;
+        height: 60px;
+        border:none;
+        border-radius: 50px;
+        background-color: #fc2153;
+        color: white;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 400;
+        font-family: 'Amaranth', sans-serif;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, .5);
+    }
+    .btn-precio h3{
+        font-size: 54px;
+        font-weight: 400;
+    }
+
+    .titulo-juegos{
+        display: flex;
+        flex-direction: column;
+        color:white;
+    }
+    .titulo-juegos .titulo{
+        font-size: 32px;
+        margin: 10px 0;
+    }
+
+    .top-juegos{
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .top-juegos .juego{
+        width: 210px;
+        margin: 0 10px 30px 10px;
+    }
+    .top-juegos .juego:hover{
+        cursor:url('../img/mano.png'), pointer;
+    }
+    
+    .top-juegos .juego .img-juego{
+        background-image: url('../img/juego1.jpg');
+        background-position: top center;
+        background-size: 100%;
+        transition: background-size .2s ease;
+        -moz-transition: background-size .2s ease;
+        -ms-transition: background-size .2s ease;
+        -o-transition: background-size .2s ease;
+        -webkit-transition: background-size .2s ease;
+        width: 100%;
+        height: 270px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        box-shadow: 0 5px 20px rgba(255, 255, 255, .2);
+        border: 1px solid rgba(255, 255, 255, .5);
+    }
+    .top-juegos .juego:nth-child(2) .img-juego{
+        background-image: url('../img/juego2.jpg');
+        background-position: top center;
+        background-size: 100%;
+    }
+    .top-juegos .juego:nth-child(3) .img-juego{
+        background-image: url('../img/juego3.jpeg');
+        background-position: top center;
+        background-size: 100%;
+    }
+    .top-juegos .juego:nth-child(4) .img-juego{
+        background-image: url('../img/juego4.jpg');
+        background-position: top center;
+        background-size: 100%;
+    }
+    .top-juegos .juego:nth-child(5) .img-juego{
+        background-image: url('../img/juego5.jpg');
+        background-position: top center;
+        background-size: 100%;
+    }
+    .top-juegos .juego:nth-child(6) .img-juego{
+        background-image: url('../img/juego6.jpg');
+        background-position: top center;
+        background-size: 100%;
+    }
+    .top-juegos .juego:nth-child(7) .img-juego{
+        background-image: url('../img/juego7.jpg');
+        background-position: top center;
+        background-size: 100%;
+    }
+    .top-juegos .juego:hover .img-juego{
+        background-size: 105%;
+    }
+    .top-juegos .juego .juego-titulo{
+        text-align:center;
+        font-size: 24px;
+    }
+
+    /*Estilo registro*/
+
+    .registro{
+        width: 450px;
+        background-color: rgba(0,0,0,.2);
+        border:1px solid rgba(255 , 255, 255,.1);
+        padding: 30px 50px;
+        margin: 0 auto;
+        margin-top: 50px;
+        border-radius: 15px;
+        font-family: 'Amaranth', sans-serif;
+        color:white;
+        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.8);
+    }
+    .registro h4{
+        text-align: center;
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+    .registro label, .login label{
+        font-size:18px;
+        display: block;
+        margin-bottom: 5px;
+    }
+    .controreg {
+        width: 100%;
+        background: rgba(0, 0, 0, .3);
+        padding: 10px;
+        border-radius: 4px;
+        margin-bottom: 10px;
+        border: 1px solid rgb(3, 91, 107);
+        font-family: 'Amaranth', sans-serif;
+        font-size: 18px;
+        color:white;
+        outline: none;
+    }
+    .registro p{
+        height: 40px;
+        text-align: center;
+        font-size: 16px;
+        line-height: 40px;
+
+    }
+    .terminos{
+        margin-top: 5px;
+        text-align: center;
+        font-size: 16px;
+
+    }
+    .tyc{
+        margin-right: 5px;
+        outline: none;
+    }
+    .registro a{
+        font-size: 16px;
+        color: white;
+        transition: color .2s ease;
+    }
+    .registro a:hover{
+        color: rgb(43, 188, 214);
+        text-decoration: underline;
+    }
+
+    .registro .botonreg {
+        display: block;
+        margin: 15px auto;
+        width: 200px;
+        height: 50px;
+        background: rgb(3, 91, 107);
+        border: none;
+        border-radius: 5px;
+        padding: 12px;
+        color: white;
+        font-size: 16px;
+        outline: none;
+        font-family: 'Amaranth', sans-serif;
+        cursor:url('../img/mano.png'), pointer;
+        transition: background .2s ease;
+    }
+
+    .registro .botonreg:hover{
+        background: rgb(4, 106, 124);
+    }
+
+    /*Estilo login*/
+
+    .login{
+        width: 450px;
+        background-color: rgba(0,0,0,.2);
+        border:1px solid rgba(255 , 255, 255,.1);
+        padding: 30px 50px;
+        margin: 0 auto;
+        margin-top: 50px;
+        border-radius: 15px;
+        font-family: 'Amaranth', sans-serif;
+        color:white;
+        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.8);
+    }
+    .login h4{
+        text-align: center;
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+    .contrologin {
+        width: 100%;
+        background: rgba(0, 0, 0, .3);
+        padding: 10px;
+        border-radius: 4px;
+        margin-bottom: 16px;
+        border: 1px solid rgb(3, 91, 107);
+        font-family: 'Amaranth', sans-serif;
+        font-size: 18px;
+        color:white;
+        outline: none;
+    }
+    .login p{
+        height: 30px;
+        text-align: center;
+        font-size: 16px;
+        line-height: 30px;
+    }
+    #centro{
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        font-size: 16px;
+    }
+    .login a{
+        font-size: 16px;
+        color: white;
+        transition: color .2s ease;
+    }
+    .login a:hover{
+        color: rgb(43, 188, 214);
+        text-decoration: underline;
+    }
+    .login .botonreg {
+        display: block;
+        margin: 15px auto;
+        width: 200px;
+        height: 50px;
+        background: rgb(3, 91, 107);
+        border: none;
+        border-radius: 5px;
+        padding: 12px;
+        color: white;
+        font-size: 16px;
+        outline: none;
+        font-family: 'Amaranth', sans-serif;
+        cursor:url('../img/mano.png'), pointer;
+        transition: background .2s ease;
+    }
+
+    .login .botonreg:hover{
+        background: rgb(4, 106, 124);
+    }
+
+    /*Estilo Recover*/
+    .recover{
+        width: 450px;
+        background-color: rgba(0,0,0,.2);
+        border:1px solid rgba(255 , 255, 255,.1);
+        padding: 30px 50px;
+        margin: 0 auto;
+        margin-top: 50px;
+        border-radius: 15px;
+        font-family: 'Amaranth', sans-serif;
+        color:white;
+        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.8);
+    }
+    .recover h4{
+        text-align: center;
+        font-size: 32px;
+        margin-bottom: 30px;
+    }    
+    .recover .botonreg {
+        display: block;
+        margin: 15px auto;
+        width: 200px;
+        height: 50px;
+        background: rgb(3, 91, 107);
+        border: none;
+        border-radius: 5px;
+        padding: 12px;
+        color: white;
+        font-size: 16px;
+        outline: none;
+        font-family: 'Amaranth', sans-serif;
+        cursor:url('../img/mano.png'), pointer;
+        transition: background .2s ease;
+    }
+    .recover .botonreg:hover{
+        background: rgb(4, 106, 124);
+    }
+    .recover p{
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+    .recover p a{
+        font-size: 16px;
+        color: white;
+        transition: color .2s ease;
+    }
+    .recover p a:hover{
+        color: rgb(43, 188, 214);
+        text-decoration: underline;
+    }
+    .registro, .login, .recover{
+        margin-bottom: 150px;
+    }
+
+    /* Estilos Footer */
+    footer {
+        position: absolute;
+        bottom: 0;
+        margin-top: 100px;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, .2);
+        color:white;
+        text-align: center;
+    }
+
+    /* Ajuste de dispositivos */
+    @media (max-width:1180px){
+        .barra-busqueda{
+            width: 300px;
+        }
+    }
+    @media (max-width:900px){
+        .barra-busqueda{
+            width: 200px;
+        }
+        .juegos-secundarios{
+            flex-direction: column;
+        }
+        .imagen-juego1, .imagen-juego2 {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+    @media (max-width:785px){
+        .busqueda{
+            display: none;
+        }
+    }
+    @media (max-width:700px){
+        .oscuro{
+            padding: 20px 30px;
+        }
+        .imagen-principal p {
+            display: none;
+        }
+        .oscuro1 , .oscuro2 {
+            padding: 20px 30px;
+        }
+        .imagen-juego1 p, .imagen-juego2 p{
+            display: none;
+        }
+    }
+
+    @media (max-width:520px){
+        .logo{
+            margin-top: 20px;
+        }
+        .container{
+            flex-direction: column;
+        }
+        
+        .btn-precio{
+            display: none;
+        }
+        .registro, .login, .recover{
+            width: 90%;
+            padding: 20px;
+        }
+    }
+
+    @media (max-width:400px){
+        .imagen-principal h1{
+            font-size: 42px;
+        }
+        .imagen-juego1 h3, .imagen-juego2 h3{
+            font-size: 24px;
+        }
+    }
+    

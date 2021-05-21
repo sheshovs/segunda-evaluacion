@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png" sizes="64x64">
+    <title>Top Games | Venta de juegos digitales</title>
+
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" 
+        crossorigin="anonymous" />
+</head>
+<body>
+    <div id="fondo"></div>
+    <div class="contenedor-principal">
+        <header class= "encabezado">
+            <div class = "container">
+
+                <div class = "logo">
+                    <i class="fas fa-bars" onclick='abrirMenu()'></i>
+                    <a href="index.html" class="texto-logo"><h1>Top Games</h1></a>
+                </div>
+                <div class="busqueda">
+                    <input class="barra-busqueda" type="text" placeholder="Buscar">
+                    <button class="btn-busqueda"><i class="fas fa-search"></i></button>
+                </div>
+
+                <nav class= "menu">
+                    <a href= "login.html"> Iniciar sesión </a>
+                    <a href= "register.html"> Registrate </a>
+                </nav>
+            </div>
+        </header>
+        <div class = "cuerpo-menu" onclick='cerrarMenu()'>
+            <div class="contenido-menu">
+                <div class="titulo-menu">
+                    <h3>Novedades</h3>
+                    <i class="fas fa-times-circle" onclick='cerrarMenu()'></i>
+                </div>
+
+                <nav>
+                    <a href="#">Nuevos Juegos</a>
+                    <a href="#">Top Semanales</a>
+                    <a href="#">Mejores Descuentos</a>
+                </nav>
+                
+            </div>
+        </div> 
+        
+        <main class="contenedor">
+            <div class="imagen-principal">
+                <div class="oscuro">
+                <h1>Valheim</h1>
+                <p>¡Lucha, construye y conquista tu viaje en una saga digna de la bendición de Odin!</p>
+                <div class="btn-precio">
+                    <button>Comprar</button>
+                    <h3>$7.000</h3>
+                </div>
+                </div>
+            </div>
+            <div class="juegos-secundarios">
+                <div class = "imagen-juego1">
+                    <div class="oscuro1">
+                        <h3>Ark</h3>
+                        <p>ARK Survival Evolved nos traslada a una isla paradisíaca donde encontraremos dinosaurios, tribus y otros supervivientes.</p>
+                    </div>
+                </div>
+                <div class = "imagen-juego2">
+                    <div class="oscuro2">
+                        <h3>Metin 2</h3>
+                        <p>¡Triunfa en un fascinante mundo de aventuras en el Lejano Oriente! Lucha por el Dios Dragón. Comienza tu aventura.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class='titulo-juegos'>
+                <h2 class="titulo">Juegos TOP</h2>
+                <hr>
+                
+                <div class="top-juegos">
+                    <div class="juego">
+                        <div class="img-juego"></div>
+                        <h3 class="juego-titulo">Minecraft</h3>
+                    </div>
+                    <div class="juego">
+                        <div class="img-juego"></div>
+                        <h3 class="juego-titulo">Rust</h3>
+                    </div>
+                    <div class="juego">
+                        <div class="img-juego"></div>
+                        <h3 class="juego-titulo">Counter-Strike Global Offensive</h3>
+                    </div>
+                    <div class="juego">
+                        <div class="img-juego"></div>
+                        <h3 class="juego-titulo">Among Us</h3>
+                    </div>      
+                    <div class="juego">
+                        <div class="img-juego"></div>
+                        <h3 class="juego-titulo">Phasmophobia</h3>
+                    </div>      
+                    <div class="juego">
+                        <div class="img-juego"></div>
+                        <h3 class="juego-titulo">Dark Souls III</h3>
+                    </div>   
+                    <div class="juego">
+                        <div class="img-juego"></div>
+                        <h3 class="juego-titulo">Diablo IV</h3>
+                    </div>     
+                         
+                </div>
+            </div>
+
+        </main>
+        <footer>
+            <p>© 2021 Top Games. Todos los derechos reservados.</p>
+        </footer>
+
+
+    </div>
+    <script>
+
+        var menu = document.querySelector('.cuerpo-menu');
+
+        const abrirMenu = () => {
+            menu.classList.add('mostrar');
+        };
+
+        const cerrarMenu = () => {
+            menu.classList.remove('mostrar');
+        };
+
+
+    </script>
+
+
+</body>
+</html>
