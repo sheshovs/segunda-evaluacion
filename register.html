@@ -28,7 +28,7 @@
                 </nav>
             </div>
         </header>
-        <section class="registro">
+        <form id ="form-registro" class="registro">
             <h4>Crear nueva cuenta</h4>
             <label for="nombres">Nombre:</label>
             <input class="controreg" type="text" name="nombres" id="nombres" placeholder="Ingrese su nombre">
@@ -39,14 +39,15 @@
             <label for="password2">Repita su contraseña:</label>
             <input class="controreg" type="password" name="password2" id="password2" placeholder="Repita su contraseña">
             <div class="terminos">
-                <input type="checkbox" class="tyc">Estoy de acuerdo con los <a href= "#">Términos y condiciones</a>.
+                <input id="cajita" type="checkbox" class="tyc">Estoy de acuerdo con los <a href= "#">Términos y condiciones</a>.
             </div>
-            <input class="botonreg" type="submit" value="Crear">
+            <input class="botonreg" type="submit" value="Crear cuenta">
             <p><a href="login.html">Iniciar sesión</a></p>
-        </section>
+        </form>
         <footer>
             <p>© 2021 Top Games. Todos los derechos reservados.</p>
         </footer>
     </div>
+    <script src="assets/js/localstorage.js"></script>
 </body>
 </html>
