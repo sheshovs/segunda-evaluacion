@@ -19,13 +19,12 @@
             <div class = "container">
 
                 <div class = "logo">
-                    <i class="fas fa-bars" onclick='abrirMenu()'></i>
                     <a href="index.html" class="texto-logo"><h1>Top Games</h1></a>
                 </div>
-                <div class="busqueda">
-                    <input class="barra-busqueda" type="text" placeholder="Buscar">
-                    <button class="btn-busqueda"><i class="fas fa-search"></i></button>
-                </div>
+                <form class="busqueda" id="search">
+                    <input class="barra-busqueda" type="text" placeholder="Buscar juego">
+                    <button class="btn-busqueda" type="submit"><i class="fas fa-search"></i></button>
+                </form>
 
                 <nav class= "menu">
                     <a href= "login.html"> Iniciar sesión </a>
@@ -33,21 +32,7 @@
                 </nav>
             </div>
         </header>
-        <div class = "cuerpo-menu" onclick='cerrarMenu()'>
-            <div class="contenido-menu">
-                <div class="titulo-menu">
-                    <h3>Novedades</h3>
-                    <i class="fas fa-times-circle" onclick='cerrarMenu()'></i>
-                </div>
 
-                <nav>
-                    <a href="#">Nuevos Juegos</a>
-                    <a href="#">Top Semanales</a>
-                    <a href="#">Mejores Descuentos</a>
-                </nav>
-                
-            </div>
-        </div> 
         
         <main class="contenedor">
             <div class="imagen-principal">
@@ -119,21 +104,7 @@
 
 
     </div>
-    <script>
-
-        var menu = document.querySelector('.cuerpo-menu');
-
-        const abrirMenu = () => {
-            menu.classList.add('mostrar');
-        };
-
-        const cerrarMenu = () => {
-            menu.classList.remove('mostrar');
-        };
-
-
-    </script>
-
-
+    
+    <script src="./assets/js/api.js"></script>
 </body>
 </html>
