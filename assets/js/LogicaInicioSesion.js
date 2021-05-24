@@ -27,9 +27,7 @@ function validarCredenciales(correo, password) {
 }
 
 function ingresar() {
-
-
-
+        
 }
 
 
