@@ -11,6 +11,12 @@
         },
         '/recover': {
             archivo: 'recover.html'
+        },
+        '/perfil': {
+            archivo: 'perfil.html'
+        },
+        '/logout': {
+            archivo: 'logout.html'
         }
     };
 
@@ -25,6 +31,21 @@
         w.addEventListener('hashchange', function () {
             const ruta = w.location.hash;
             cargarArchivoRuta(ruta);
+
+            var menuUser = document.querySelector('#menu-user');
+            var menu = document.querySelector('#menu');
+            var saludo = document.querySelector('#saludo');
+            var User = JSON.parse(localStorage.getItem('usuario'));
+
+
+            if (User && ruta !== '#/login' && ruta !== '#/register' && ruta !== '#/recover') {
+                menuUser.style.display = 'flex';
+                menu.style.display = 'none';
+                saludo.innerHTML = 'Bienvenido ' + User.nombre;
+            } else {
+                menuUser.style.display = 'none';
+                menu.style.display = 'block';
+            }
         });
         cargarArchivoRuta(w.location.hash);
     }
@@ -43,4 +64,6 @@
                 contenedor.innerHTML = respuestaTexto;
             })
     }
+
 })(document, window);
+

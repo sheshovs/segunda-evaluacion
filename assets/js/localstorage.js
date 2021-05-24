@@ -1,12 +1,13 @@
-const nombre = document.getElementById("nombres")
-const correo = document.getElementById("correo")
-const password = document.getElementById("password")
-const password2 = document.getElementById("password2")
-var checkbox = document.getElementById("cajita")
-const form = document.getElementById("form-registro")
 
-form.addEventListener("submit", e => {
+const validarForm = e => {
 	e.preventDefault();
+
+	const nombre = document.getElementById("nombres")
+	const correo = document.getElementById("correo")
+	const password = document.getElementById("password")
+	const password2 = document.getElementById("password2")
+	var checkbox = document.getElementById("cajita")
+
 	let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
 	if (nombre.value.length < 4) {
 		alert("El nombre debe tener mínimo 4 caracteres")
@@ -32,9 +33,18 @@ form.addEventListener("submit", e => {
 	var usuario = {
 		nombre: nombre.value,
 		correo: correo.value,
+		telefono: '',
 		password: password.value
 	}
 
 	localStorage.setItem("usuario", JSON.stringify(usuario));
-})
+
+	alert('Se ha registrado con éxito, será redirigido a iniciar sesión.');
+
+	setTimeout(() => {
+		window.location.hash = '#/login';
+	}, 500);
+
+
+}
 
