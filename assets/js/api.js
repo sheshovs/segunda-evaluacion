@@ -34,9 +34,7 @@ const obtenerResultados = async (e) => {
                                     <h1 class='game-title'>${juego.external}</h1>
                                     <p class='game-price'>Precio: $${Math.round(juego.cheapest * 721)} CLP</p>                                
                                 </div>
-
                             </article>`;
-
     })
 
 }

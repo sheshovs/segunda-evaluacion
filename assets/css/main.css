@@ -70,10 +70,8 @@
         color: #fff;
         font-weight: 400;
         font-size: 32px;
-        margin-left: 20px;
         text-transform: uppercase;
         letter-spacing: 2px;
-        margin-bottom: 4px;
     }
     .container .menu{
         float: right;
@@ -103,6 +101,8 @@
         outline:none;
         background-color: rgba(255,255,255,.2);
         color:white;
+        position: relative;
+        left: 20px;
     }
     ::-webkit-input-placeholder{
         color: #a1a1a1;
@@ -110,7 +110,7 @@
 
     .btn-busqueda{
         position: relative;
-        left: -40px;
+        left: -20px;
         width: 40px;
         height: 40px;
         border: none;
@@ -176,7 +176,7 @@
     main.contenedor{
         width: 90%;
         max-width: 1200px;
-        margin: 30px auto 150px auto;
+        margin: 40px auto 150px auto;
     }
     .imagen-principal{
         background-image: url('/assets/img/game1.webp');
@@ -210,6 +210,7 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 50px;
+        width: 100%;
     }
     .imagen-juego1{
         
@@ -617,6 +618,9 @@
         .barra-busqueda{
             width: 300px;
         }
+        .game-box{
+            width: 30%;
+        }
     }
     @media (max-width:900px){
         .barra-busqueda{
@@ -629,10 +633,22 @@
             width: 100%;
             margin-bottom: 30px;
         }
+        .game-box{
+            width: 45%;
+        }
     }
     @media (max-width:785px){
-        .busqueda{
-            display: none;
+        .container{
+            flex-direction: column;
+        }
+        .logo{
+            margin: 15px;
+        }
+        .barra-busqueda{
+            width: 300px;
+        }
+        .game-box{
+            width: 100%;
         }
     }
     @media (max-width:700px){
